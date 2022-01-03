@@ -37,7 +37,7 @@
         <label for="search-box" class="fas fa-search"></label>
       </div>
       
-      <div class="cart-items-container">
+      <div class="cart-items-container" id="cart-items-container">
         <div class="cart-item" id="cart-item">
           <img src="./img/cart-item-1.png" alt="">
           <div class="content">
@@ -47,7 +47,7 @@
           <span class="fas fa-times" ></span>
         </div>
 
-        <div class="cart-item" id="cart-item">         
+        <div class="cart-item" id="cart-item item-one" >         
           <img src="./img/cart-item-2.png" alt="">
           <div class="content">
             <h3>cart item 02</h3>
@@ -56,7 +56,7 @@
           <span class="fas fa-times" ></span>
         </div>
 
-        <div class="cart-item" id="cart-item">      
+        <div class="cart-item" id="cart-item item-two">      
           <img src="./img/cart-item-2.png" alt="">
           <div class="content">
             <h3>cart item 02</h3>
@@ -65,7 +65,7 @@
           <span class="fas fa-times" ></span>
         </div>
 
-        <div class="cart-item"id="cart-item">        
+        <div class="cart-item"id="cart-item item-three">        
           <img src="./img/cart-item-3.png" alt="">
           <div class="content">
             <h3>cart item 03</h3>
@@ -88,9 +88,6 @@
         <a href="#" class="btn" id="btn">Checkout here</a>
       </div>
 
-     
-
-      
     </header>
   <!--header ends-->
 
@@ -116,7 +113,7 @@
     <h1 class="heading"><span>about</span>us</h1>
     <div class="row">
       <div class="image">
-        <img src="./img/about-img.jpeg" alt="">
+        <img class="img" src="./img/about-img.jpeg" alt="">
       </div>
       <div class="content">
         <h3>what makes our coffee special</h3>
@@ -127,6 +124,7 @@
         <a href="#menu" class="btn">learn more</a>
       </div>
     </div>
+    <div class="cursor"></div>
   </section>
 <!--about section ends-->
 
@@ -251,10 +249,47 @@
       </div>  
     </div>
   </div>
+
 </section>
+
+
+<!-- reviews section starts -->
+<main>
+  <h1 class="heading"><span>ourt</span>Products</h1>
+  <div class="container">
+
+    <div class="first-review">       
+        <article class="reviews">
+          <div class="img-container">
+            <img src="./img/menu-1.png" alt="" id="person-img">
+          </div>
+
+          <h2 id=  "author"></h2>
+          <p class="reviews-first-p" id="job">   
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio consectetur explicabo accusamus? Saepe, cupiditate aut.
+          </p>
+          <p class="reviews-second-p" id="info">  
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae consequatur earum nihil. Modi, excepturi consequatur.
+          </p>
+
+          <div class="button-container">
+            <button class="prev-btn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="next-btn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+          <!-- random button -->
+          <button class="random-btn">surprise me</button>
+         </article>
+    </div>
+
+  </div>
+</main>
 <!--about section ends-->
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="app.js" ></script>
 </body>
 </html>

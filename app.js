@@ -31,18 +31,33 @@ window.onscroll = () =>{
 }
 
 
-// delete item 
+// // delete item 
+// document.getElementById('cart-item').addEventListener('click', function(e){
+//     if (e.target.classList.contains('fa-times')){
+//         e.target.parentElement.remove();
+//         document.querySelector('.ul').remove();
+//     }
+// });
 
-document.getElementById('cart-item').addEventListener('click', function(e){
-    if (e.target.classList.contains('fa-times')){
-        e.target.parentElement.remove();
-        document.querySelector('.ul').remove();
-    }
-});
+// const container = document.getElementById('cart-items-container');
+// container.forEach(function(item) {
+//     item.addEventListener('click', function(e){
+//     const styles = e.currentTarget.classList;
+//     if (styles.contains("fa-times")) {
+//       alert()
+//     }
+//     })
 
-// add to checkout
+// })
 
-document.getElementById('cart-item').addEventListener('click', function(e){
+
+
+// remove from checkout
+
+
+//add to checkout
+document.getElementById('cart-item').addEventListener('click', add)
+function add (e){
 
     const liList = document.querySelector('.cart-item');
     // creat li
@@ -60,7 +75,8 @@ document.getElementById('cart-item').addEventListener('click', function(e){
     // creating a textNode and append to ul
     li.appendChild (document.createTextNode('item 1 added, price 15.99$'));   
     document.getElementById('add-list').appendChild(li);
-})
+}
+
 
 
 document.getElementById('add-list').addEventListener('click', function(e){
@@ -68,3 +84,26 @@ document.getElementById('add-list').addEventListener('click', function(e){
         document.querySelector('.list').remove();
     }
 })
+
+document.getElementById('btn').addEventListener('click', function(e){
+    e.target.innerText = 'congratulations';
+    e.target.style.background= 'green';
+})
+
+
+$(document).ready(function(){
+  
+  
+  $('body').mousemove(function(e){
+
+    var x = e.pageX + 'px';
+    var y = e.pageY + 'px';
+
+    $('.cursor').css({'top':y, 'left':x});
+
+});
+});
+
+
+
+
