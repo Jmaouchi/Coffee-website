@@ -107,3 +107,105 @@ $(document).ready(function(){
 
 
 
+// reviews changing
+
+const reviews = [
+    { 
+        id:1,
+        name: 'jugurta maouchi',
+        job:'frontend developer',
+        img:'C:/Users/12106/OneDrive/Desktop/Coffee website/img/pic-2.png',
+        text:' fosadlknasldn alskdnlaknsd asldknalksnd alskdn asdlkjna sdfsdlkansdlka sdlaknsdla sdlnasdlknsldn sdlnflknsd flnsdlfn skdfnlkn'
+
+    }
+    ,
+    {   
+        id:2,
+        name: 'yuva maouchi',
+        job:'Data Analyst',
+        img:' C:/Users/12106/OneDrive/Desktop/Coffee website/img/djigo.jpg',
+        text:' fosadlknasldn alskdnlaknsd asldknalksnd alskdn asdlkjna sdlkansdlkasdf d sdlaknsdla sdlnasdlknsldn sdlnflknsd flnsdlfn skdfnlkn'
+
+    }
+    ,
+    {   
+        id:3,
+        name: 'ali maouchi',
+        job:'Web developer',
+        img:'C:/Users/12106/OneDrive/Desktop/Coffee website/img/pic-1.png',
+        text:' fosadlknasldn alskdnlaknsd asldknalksnd alskdn  sada asdasd dsasdasddddddddddasdas dsad asd dsawe csaasdlkjna sdlkansdlka sdlaknsdla sdlnasdlknsldn sdlnflknsd flnsdlfn skdfnlkn'
+    }
+
+    ,
+    {   
+        id:3,
+        name: 'Mohand maouchi',
+        job:'Web developer',
+        img:'C:/Users/12106/OneDrive/Desktop/Coffee website/img/pic-1.png',
+        text:' fosadlknasldn alskdnlaknsd asldknalksnd alskdn  sada asdasd asdasasdasd dsfdfsffsdf dsf dasdasdsasdasddddddddddasd        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat molestiae accusantium magni a esse accusamus tenetur sint non perspiciatis laboriosam!as dsad asd dsawe csaasdlkjna sdlkansdlka sdlaknsdla sdlnasdlknsldn sdlnflknsd flnsdlfn skdfnlkn'
+    }
+
+    ,
+    {   
+        id:3,
+        name: 'Nora maouchi',
+        job:'Web developer',
+        img:'C:/Users/12106/OneDrive/Desktop/Coffee website/img/pic-3.png ',
+        text:' fosadlknasldn alskdnlaknsd asldknalksnd alskdn  sada asdasdffffffffff  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat molestiae accusantium magni a esse accusamus tenetur sint non perspiciatis laboriosam! dfssdfffffasdasddddddddddasdas dsad asd dsawe csaasdlkjna sdlkansdlka sdlaknsdla sdlnasdlknsldn sdlnflknsd flnsdlfn skdfnlkn'
+    }
+]
+
+
+const img = document.getElementById('person-img');
+const author = document.getElementById('author');
+const job = document.getElementById("job");
+const info = document.getElementById("info");
+
+
+const prevBtn = document.querySelector(".prev-btn");
+const nextBtn = document.querySelector(".next-btn");
+const randomBtn = document.querySelector(".random-btn");
+
+let currentItem = 0;
+
+window.addEventListener("DOMContentLoaded", function(){
+ item = reviews[currentItem];   
+ img.src = item.img;
+ author.textContent = item.name;
+ job.textContent = item.job;
+ info.textContent = item.text;
+})
+
+function showPerson(){
+ item = reviews[currentItem]   
+ img.src = item.img;
+ author.textContent = item.name;
+ job.textContent = item.job;
+ info.textContent = item.text;
+}
+
+// next btn
+
+nextBtn.addEventListener('click', function(){
+    currentItem++;
+    if(currentItem > reviews.length-1){
+        currentItem = 0;
+    }
+    showPerson();
+})
+
+// prev btn
+
+prevBtn.addEventListener('click', function(){
+    currentItem--;
+    if(currentItem < 0){
+        currentItem = reviews.length-1;
+    }
+    showPerson();
+})
+
+randomBtn.addEventListener("click", function () {
+    currentItem = Math.floor(Math.random() * reviews.length);
+    showPerson(currentItem);
+  });
+  
