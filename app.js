@@ -50,7 +50,18 @@ window.onscroll = () =>{
 
 // })
 
+const collections = ['itemOne', 'itemTwo', 'itemThree', 'itemFour', 'itemFive'];
 
+const itemOne = document.getElementById('item-one');
+const itemTwo = document.getElementById('item-two');
+const itemThree = document.getElementById('item-three');
+const itemFour = document.getElementById('item-four');
+const itemFive = document.getElementById('item-five');
+
+let coco = collections.map((function(task){
+    
+
+}))
 
 // remove from checkout
 
