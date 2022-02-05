@@ -1,5 +1,4 @@
 // start with the navbar whenwver the screen is at 991px
-
 let navbar = document.querySelector('.navbar');
 
 document.querySelector('#menu-btn').onclick = () =>{
